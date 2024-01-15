@@ -163,13 +163,6 @@ alias dbt_build="docker build -t ${PWD##*/} . --target default --build-arg GITHU
 alias dbt_run="docker run -it -v ~/.aws/:/home/app-user/.aws -e AWS_PROFILE=production ${PWD##*/} sh"
 
 ########################################################
-# PySpark
-########################################################
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-# export SPARK_HOME="/usr/local/opt/spark-3.1.1/spark-3.1.1-bin-hadoop2.7"
-# export PATH=$SPARK_HOME/bin:$PATH
-
-########################################################
 # Rancher Desktop
 ########################################################
 export PATH="/Users/yusuf.mahtab/.rd/bin:$PATH"
