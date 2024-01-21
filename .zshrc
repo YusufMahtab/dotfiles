@@ -146,8 +146,12 @@ gclone() {
 }
 
 ########################################################
-# virtualenvwrapper
+# pyenv and virtualenvwrapper
 ########################################################
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # export PYTHON_VERSION=$(pyenv global)
 # export WORKON_HOME=~/.virtualenvs
 # export VIRTUALENVWRAPPER_VIRTUALENV=~/.pyenv/versions/$PYTHON_VERSION/bin/virtualenv
@@ -165,7 +169,7 @@ alias dbt_run="docker run -it -v ~/.aws/:/home/app-user/.aws -e AWS_PROFILE=prod
 ########################################################
 # Rancher Desktop
 ########################################################
-export PATH="/Users/yusuf.mahtab/.rd/bin:$PATH"
+# export PATH="/Users/yusuf.mahtab/.rd/bin:$PATH"
 
 # kubectl freaks out if the context != rancher-desktop, so use the one from brew instead
 alias fix_k="test -f ~/.rd/bin/kubectl && mv ~/.rd/bin/kubectl ~/.rd/bin/formerly-kubectl"
@@ -175,7 +179,7 @@ fix_k
 alias link_docker='echo "sudo ln -s .rd/docker.sock /var/run/docker.sock"'
 
 # Some apps (like act) use DOCKER_HOST to look for docker
-alias set_docker_host="export DOCKER_HOST=$(docker context inspect --format '{{.Endpoints.docker.Host}}')"
+alias set_docker_host='export DOCKER_HOST=$(docker context inspect --format "{{.Endpoints.docker.Host}}")'
 
 ########################################################
 # Kubernetes
