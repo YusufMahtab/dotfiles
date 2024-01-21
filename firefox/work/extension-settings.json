@@ -1,1 +1,58 @@
-{"version":3,"url_overrides":{},"prefs":{"websites.hyperlinkAuditingEnabled":{"initialValue":{},"precedenceList":[{"id":"uBlock0@raymondhill.net","installDate":1665422246360,"value":false,"enabled":true}]},"network.networkPredictionEnabled":{"initialValue":{},"precedenceList":[{"id":"uBlock0@raymondhill.net","installDate":1665422246360,"value":false,"enabled":true}]}},"homepageNotification":{},"tabHideNotification":{},"default_search":{},"newTabNotification":{},"commands":{"toggle":{"precedenceList":[{"id":"addon@darkreader.org","installDate":1665422459391,"value":{"shortcut":"Alt+D"},"enabled":true}]},"_execute_browser_action":{"precedenceList":[{"id":"plugin@okta.com","installDate":1665490854831,"value":{"shortcut":"Alt+O"},"enabled":true}]}}}
+{
+    "version": 3,
+    "url_overrides": {},
+    "prefs": {
+        "websites.hyperlinkAuditingEnabled": {
+            "initialValue": {},
+            "precedenceList": [
+                {
+                    "id": "uBlock0@raymondhill.net",
+                    "installDate": 1665422246360,
+                    "value": false,
+                    "enabled": true
+                }
+            ]
+        },
+        "network.networkPredictionEnabled": {
+            "initialValue": {},
+            "precedenceList": [
+                {
+                    "id": "uBlock0@raymondhill.net",
+                    "installDate": 1665422246360,
+                    "value": false,
+                    "enabled": true
+                }
+            ]
+        }
+    },
+    "homepageNotification": {},
+    "tabHideNotification": {},
+    "default_search": {},
+    "newTabNotification": {},
+    "commands": {
+        "toggle": {
+            "precedenceList": [
+                {
+                    "id": "addon@darkreader.org",
+                    "installDate": 1665422459391,
+                    "value": {
+                        "shortcut": "Alt+D"
+                    },
+                    "enabled": true
+                }
+            ]
+        },
+        "_execute_browser_action": {
+            "precedenceList": [
+                {
+                    "id": "plugin@okta.com",
+                    "installDate": 1665490854831,
+                    "value": {
+                        "shortcut": "Alt+O"
+                    },
+                    "enabled": true
+                }
+            ]
+        }
+    }
+}
