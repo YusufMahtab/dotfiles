@@ -66,6 +66,22 @@ update_dotfiles() {
   cp ~/.p10k.zsh ~/yusufmahtab/dotfiles/.p10k.zsh
 }
 
+countdown () {
+  for i in `seq $1 -1 1`; do 
+    echo -ne "\r$i ";
+    sleep 1;
+  done
+  say "time's up"
+}
+
+stopwatch() {
+  date1=`date +%s`;
+  while true; do
+    echo -ne "$(date -ujf "%s" $((`date +%s` - $date1)) +%H:%M:%S)\r";
+    sleep 0.1
+  done
+}
+
 ########################################################
 # AWS
 ########################################################
