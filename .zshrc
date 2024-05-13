@@ -30,6 +30,7 @@ HIST_STAMPS="mm/dd/yyyy"
 plugins=(
   aws
   poetry
+  terraform
   zoxide
   zsh-autosuggestions
 )
@@ -67,7 +68,7 @@ update_dotfiles() {
 }
 
 countdown () {
-  for i in `seq $1 -1 1`; do 
+  for i in `seq $1 -1 1`; do
     echo -ne "\r$i ";
     sleep 1;
   done
@@ -218,3 +219,7 @@ export GPG_TTY=$(tty) # GPG key
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" # iTerm2
 source ~/.okta_creds # Okta
 source ~/.artifactory # Artifactory
+eval "$(fzf --zsh)" # fzf
+eval "$(atuin init zsh --disable-up-arrow)" # atuin
+source ~/.confluent_staging # Confluent Cloud
+export CC_HEADER=$(echo -n "$CC_KEY:$CC_SECRET" | base64)
